@@ -1,0 +1,11 @@
+<div class="header">
+    <div class="logo"><h2>mitkat</h2></div>
+    <div class="navbar">
+        <div class="hamBurger" (click)="openMenu()"><span>|</span><span>|</span><span>|</span></div>
+        <div class="menu">
+            <ul *ngFor="let item of menu">
+                <li>{{item}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
