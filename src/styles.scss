@@ -18,4 +18,89 @@ body{
     width: 100%;
     height: 100vh;
     color: #FFF;
-}
+
+    .loader{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .lds-grid {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80px;
+            height: 80px;
+            
+            div {
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #dfc;
+                animation: lds-grid 1.2s linear infinite;
+                &:nth-child(1) {
+                    top: 8px;
+                    left: 8px;
+                    animation-delay: 0s;
+                }
+                &:nth-child(2) {
+                    top: 8px;
+                    left: 0;
+                    animation-delay: -0.4s;
+                }
+                &:nth-child(3) {
+                    top: 8px;
+                    left: 16px;
+                    animation-delay: -0.8s;
+                }
+                &:nth-child(4) {
+                    top: 16px;
+                    left: 0px;
+                    animation-delay: -0.4s;
+                }
+                &:nth-child(5) {
+                    top: 16px;
+                    left: 8px;
+                    animation-delay: -0.8s;
+                }
+                &:nth-child(6) {
+                    top: 16px;
+                    left: 16px;
+                    animation-delay: -1.2s;
+                }
+                &:nth-child(7) {
+                    top: 24px;
+                    left: 0px;
+                    animation-delay: -0.8s;
+                }
+                &:nth-child(8) {
+                    top: 24px;
+                    left: 8px;
+                    animation-delay: -1.2s;
+                }
+                &:nth-child(9) {
+                    top: 24px;
+                    left: 16px;
+                    animation-delay: -1.6s;
+                }
+            }
+        }
+        
+      @keyframes lds-grid {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+    }
+
+
+} 

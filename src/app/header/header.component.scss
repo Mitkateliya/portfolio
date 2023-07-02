@@ -21,6 +21,7 @@ $backgroundColorHover: #56664E;
     .logo{
         font-family: "demano",Helvetica, sans-serif;
         margin-left: 30px;
+        user-select: none;
         cursor: pointer;
     }
     .navbar{
@@ -62,11 +63,14 @@ $backgroundColorHover: #56664E;
         border-radius: 15px;
         overflow: hidden;
         z-index: 10;
+        transition: 1s;
         transform-origin: top;
         visibility: hidden;
         opacity: 0;
-        transition: 1s;
         transform: translateZ(20px) scaleY(0);
+        backdrop-filter: blur(30px);
+        background-color: rgba(0, 0, 0, 0.6);
+
         
         .close-btn{
             float: right;
@@ -84,7 +88,6 @@ $backgroundColorHover: #56664E;
         }
 
         ul{
-            // border: 1px solid black;
             text-align: center;
             width: 100%;
             text-transform: uppercase;
@@ -97,6 +100,7 @@ $backgroundColorHover: #56664E;
                 margin: 30px;
                 transition: .5s;
                 padding: 25px 30px;
+                cursor: pointer;
                 font-family: sans-serif;
 
                 &:hover{

@@ -1,12 +1,12 @@
 <div class="header">
     <div class="logo"><h2>mitkat</h2></div>
     <div class="navbar">
-        <div class="ham-burger" (click)="openMenu()" [ngStyle]="{display: openMenuFlag ? 'none' : 'block'}"><span>|</span><span>|</span><span>|</span></div>
+        <div class="ham-burger" (click)="toggleMenu()" [ngStyle]="{display: openMenuFlag ? 'none' : 'block'}"><span>|</span><span>|</span><span>|</span></div>
     </div>
     <div class="menu" [ngClass]="{'open-menu' :openMenuFlag}">
-        <div class="close-btn" (click)="openMenu()" >&times;</div>
-        <ul *ngFor="let item of menu">
-            <li>{{item}}</li>
+        <div class="close-btn" (click)="toggleMenu()">&times;</div>
+        <ul>
+            <li *ngFor="let item of menu" [routerLink]="['/'+ item]" (click)="toggleMenu()">{{item}}</li>
         </ul>
     </div>
 </div>

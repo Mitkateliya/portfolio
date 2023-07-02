@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,12 @@ export class HeaderComponent {
   openMenuFlag:boolean = false;
   menu = ["home","about","projects","services","reach me"];
 
-  openMenu(){   
+  constructor(private router:Router){}
+  toggleMenu(){   
     this.openMenuFlag = !this.openMenuFlag;
+  }
+
+  navigateTo(route:string){
+    this.router.navigate([route]);
   }
 }
