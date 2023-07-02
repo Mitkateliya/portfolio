@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  menu = ["home","about","projects","services","reach me"]
-  openMenu(){
-    console.log("menu opened");
-    
+  openMenuFlag:boolean = false;
+  menu = ["home","about","projects","services","reach me"];
+
+  openMenu(){   
+    this.openMenuFlag = !this.openMenuFlag;
   }
 }
