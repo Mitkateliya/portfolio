@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   openMenuFlag:boolean = false;
-  menu = ["home","about","projects","services","reach me"];
+  menu = ["about","projects","services","reach me"];
 
   constructor(private router:Router){}
   toggleMenu(){   

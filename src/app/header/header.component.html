@@ -6,6 +6,7 @@
     <div class="menu" [ngClass]="{'open-menu' :openMenuFlag}">
         <div class="close-btn" (click)="toggleMenu()">&times;</div>
         <ul>
+            <li routerLink="/" (click)="toggleMenu()">home</li>
             <li *ngFor="let item of menu" [routerLink]="['/'+ item]" (click)="toggleMenu()">{{item}}</li>
         </ul>
     </div>
